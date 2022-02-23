@@ -1,0 +1,11 @@
+﻿<div id="nav">
+  <div class="main">
+    <a href="/?u=<%= username %>"><img src="<%- fingerprint('/public/logo/logo1b.png') %>"></a>
+    <form action="/search" class="oneline">
+      <input type="hidden" name="u" id="u" value="<%= username %>">
+      <input type="text" name="q" id="q" autofocus placeholder="Search for modules" value="<%= query %>">
+      <input type="submit" value="Search">
+    </form>
+  </div>
+</div>
+<div class="sponsor">Supported by <a href="https://opbeat.com">Opbeat</a> &lt;3</div>

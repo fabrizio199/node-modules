@@ -1,0 +1,10 @@
+﻿{
+	"fingerprint": "{../.git/refs/heads/master}",
+	"github": {
+		"client": "b365e7adff5be0b15957",
+		"secret": "{$GITHUB_SECRET}"
+	},
+	"port": "{$PORT}",
+	"host": "node-modules.com",
+	"autoupdate": true
+}

@@ -1,0 +1,24 @@
+﻿<% modules.forEach(function(mod) { %>
+	<div class="module" data-marker="<%= mod.marker %>" data-score="<%= mod.score %>">
+		<% if (mod.stars) { %>
+			<span class="stars"><%= mod.stars %></span>
+		<% } %>
+		<h2><a href="<%= mod.url %>"><%= mod.name %></a> <span class="version">v<%= mod.version %></span></h2>
+		<div class="subline">
+			by <a href="<%= mod.profile %>" class="<%= mod.related ? 'following' : '' %>"><%= mod.author %></a>
+			<% if (mod.relation.length || mod.dependents) { %>
+				and used by
+				<% if (mod.relation.length) { %>
+					<% mod.relation.forEach(function(relation) { %>
+						<a href="https://github.com/<%= relation %>" class="following"><%= relation %></a>
+					<% }) %>
+					and
+				<% } %>
+				<%= mod.dependents + (mod.dependents === 1 ? ' module' : ' modules') %>
+			<% } %>
+		</div>
+		<p class="description">
+			<%= mod.description %>
+		</p>
+	</div>
+<% }) %>

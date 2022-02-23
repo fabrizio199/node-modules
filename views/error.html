@@ -1,0 +1,11 @@
+﻿<%{ './partials/base.html' }%>
+<%{ title %>Oooops<%}%>
+<%{ content %>
+	<%{ './partials/topSearch.html' }%>
+	<div class="main offset">
+		<div class="error block">
+			<h2>Oooooops! <%= title %></h2>
+			<pre><%= message %></pre>
+		</div>
+	</div>
+<%} %>
